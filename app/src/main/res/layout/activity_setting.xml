@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fishpond.smartapp.activity.SettingActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:background="@drawable/e2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="工具"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/top"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:id="@+id/rijiBtn"
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/riji1Btn"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/riji"
+                    android:layout_width="55dp"
+                    android:layout_height="74dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/shuiwenBtn"
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/shuiwen"
+                    android:layout_width="55dp"
+                    android:layout_height="74dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/touliaoBtn"
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/touliao"
+                    android:layout_width="55dp"
+                    android:layout_height="74dp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:id="@+id/shebeiBtn"
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/shebei"
+                    android:layout_width="55dp"
+                    android:layout_height="74dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/jiankongBtn"
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/jiankong"
+                    android:layout_width="55dp"
+                    android:layout_height="74dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.fishpond.smartapp.view.BottomLayout
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </com.fishpond.smartapp.view.BottomLayout>
+</RelativeLayout>

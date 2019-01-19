@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_line">#a0a0a0</color>
+    <color name="color_line1">#e9e9e9</color>
+
+    <color name="color_backgd1">#FFFAF0</color>
+    <color name="color_lin2">#9f9f9f</color>
+
+    <color name="skyblue">#87CEEB</color> <!--天蓝色 -->
+</resources>

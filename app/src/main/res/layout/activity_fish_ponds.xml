@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fishpond.smartapp.activity.FishPondsActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:background="#01a6e9"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <TextView
+            android:text="鱼塘"
+            android:id="@+id/fish_text"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:background="@null"
+            android:src="@drawable/shape"
+            android:id="@+id/backBtn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_above="@+id/bottom_layout2"
+        android:layout_below="@+id/top"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <com.fishpond.smartapp.view.BottomLayout
+        android:id="@+id/bottom_layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </com.fishpond.smartapp.view.BottomLayout>
+</RelativeLayout>

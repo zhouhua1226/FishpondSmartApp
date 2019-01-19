@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fishpond.smartapp.activity.SelectDeviceActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:background="@drawable/top"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:background="@drawable/select_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:id="@+id/device_recyclerview"
+        android:layout_above="@+id/bottom_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top" />
+    <View
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/top"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_line1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/device_recyclerview"
+        />
+
+    <com.fishpond.smartapp.view.BottomLayout
+        android:id="@+id/bottom_layout1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </com.fishpond.smartapp.view.BottomLayout>
+</RelativeLayout>

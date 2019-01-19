@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fishpond.smartapp.activity.EnviomentActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:background="@drawable/e1"
+            android:layout_weight="4.0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/city"
+                android:text="未知"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="26dp"
+                android:layout_toEndOf="@+id/city"
+                android:background="@drawable/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/city"
+                android:id="@+id/weather"
+                android:background="@drawable/yin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="90sp"
+                android:layout_marginTop="60dp"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/city"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignTop="@+id/temp"
+                android:layout_toEndOf="@+id/temp"
+                android:textSize="90sp"
+                android:textColor="@android:color/white"
+                android:text="°"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:text="星期一"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/date1"
+                android:layout_alignStart="@+id/date1"
+                android:id="@+id/data2" />
+            <TextView
+                android:id="@+id/date1"
+                android:layout_marginStart="35dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="50dp"
+                android:textColor="@android:color/white"
+                android:text="2019.01.01"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="13sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/color_line"
+                    android:text="null"
+                    android:id="@+id/wind_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginBottom="25dp"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/skyblue"
+                    android:text="1级"
+                    android:id="@+id/wind_s"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_alignTop="@+id/wind_d"
+                    android:layout_alignBottom="@+id/wind_s"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/skyblue"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/r2"
+                    android:textSize="13sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/color_line"
+                    android:text="相对湿度"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginBottom="25dp"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/skyblue"
+                    android:text="1％"
+                    android:id="@+id/hum_s"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_alignTop="@+id/r2"
+                    android:layout_alignBottom="@+id/hum_s"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/skyblue"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1.0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="13sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/color_line"
+                    android:text="空气质量"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginBottom="25dp"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/skyblue"
+                    android:text="优"
+                    android:id="@+id/air"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.fishpond.smartapp.view.BottomLayout
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </com.fishpond.smartapp.view.BottomLayout>
+</RelativeLayout>
