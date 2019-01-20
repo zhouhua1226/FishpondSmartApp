@@ -41,14 +41,21 @@ public class Utils {
         } else {
             return null;
         }
-        //locationProvider = LocationManager.NETWORK_PROVIDER;
+        Location location = null;
         //获取Location
-        Location location = locationManager.getLastKnownLocation(locationProvider);
+        location = locationManager.getLastKnownLocation(locationProvider);
         if (location != null) {
             //不为空,显示地理位置经纬度
             return location;
         }
-        return null;
+        //切换定位
+        if (locationProvider.contains("gps")) {
+            location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        } else if (locationProvider.contains("network")){
+            location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        }
+        return location;
+
     }
 
     public static String StringData(){
