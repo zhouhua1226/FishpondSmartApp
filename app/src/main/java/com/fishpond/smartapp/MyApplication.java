@@ -34,7 +34,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.e(TAG, "master");
+        Log.e(TAG, "dev============");
 
         setHandlerCallBack();
         RxBus.get().register(this);
