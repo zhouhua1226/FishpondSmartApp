@@ -1,9 +1,7 @@
 package com.fishpond.smartapp;
 
 import android.app.Activity;
-import android.content.Context;
-import android.support.multidex.MultiDex;
-import android.support.multidex.MultiDexApplication;
+import android.app.Application;
 import android.util.Log;
 
 import com.fishpond.smartapp.utils.CommonUtils;
@@ -23,7 +21,7 @@ import java.util.List;
 /**
  * Created by zhouh on 2018/12/1.
  */
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
     private static final String TAG = "MyApplication-";
     private List<Activity> mList = new LinkedList<>();
     private static MyApplication instance = null;
@@ -76,11 +74,6 @@ public class MyApplication extends MultiDexApplication {
         return instance;
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-    }
 
     // add Activity
 //    public void addActivity(Activity activity) {
