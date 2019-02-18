@@ -3,6 +3,7 @@ package com.fishpond.smartapp;
 import android.app.Activity;
 
 
+import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
@@ -33,7 +34,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.e(TAG, "master");
+        Log.e(TAG, "dev============");
 
         setHandlerCallBack();
         RxBus.get().register(this);
