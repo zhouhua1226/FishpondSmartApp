@@ -106,7 +106,7 @@ public class MainActivity extends Activity {
             name = nameEt.getText().toString();
             pwd = pwdEt.getText().toString();
             if (CommonUtils.isEmpty(name)) {
-                Toast.makeText(getApplicationContext(), "用户名不能为空,hhhhh!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "用户名不能为空,hhhhhh!", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (CommonUtils.isEmpty(pwd)) {
