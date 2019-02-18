@@ -35,6 +35,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Log.e(TAG, "dev============");
+        Log.e(TAG, "zhouh_dev============");
 
         setHandlerCallBack();
         RxBus.get().register(this);
