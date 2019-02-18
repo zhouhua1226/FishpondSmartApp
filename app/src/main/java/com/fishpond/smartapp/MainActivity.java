@@ -96,7 +96,7 @@ public class MainActivity extends Activity {
         connectService();
         NettyUtils.registerAppManager();
         initWelcome();
-        Log.e("ty", "====" + CmdType.getSceneName(1));
+        Log.e("ty", "====" + CmdType.getSceneName(1, "ty"));
     }
 
     @OnClick({R.id.login_iv})
