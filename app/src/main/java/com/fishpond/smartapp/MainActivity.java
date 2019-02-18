@@ -106,11 +106,11 @@ public class MainActivity extends Activity {
             name = nameEt.getText().toString();
             pwd = pwdEt.getText().toString();
             if (CommonUtils.isEmpty(name)) {
-                Toast.makeText(getApplicationContext(), "用户名不能为空!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "用户名不能为空, 请输入用户名!", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (CommonUtils.isEmpty(pwd)) {
-                Toast.makeText(getApplicationContext(), "密码不能为空!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "密码不能为空, 请输入密码!", Toast.LENGTH_SHORT).show();
                 return;
             }
             observerApiCallBack.setTag(UrlUtils.TAG_GET_LOGIN);
