@@ -41,6 +41,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.http.HEAD;
 
 
 public class MainActivity extends Activity {
@@ -107,6 +108,7 @@ public class MainActivity extends Activity {
             pwd = pwdEt.getText().toString();
             if (CommonUtils.isEmpty(name)) {
                 Toast.makeText(getApplicationContext(), "用户名不能为空, 请输入用户名!", Toast.LENGTH_SHORT).show();
+
                 return;
             }
             if (CommonUtils.isEmpty(pwd)) {
