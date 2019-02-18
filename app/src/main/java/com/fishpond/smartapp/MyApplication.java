@@ -1,7 +1,10 @@
 package com.fishpond.smartapp;
 
 import android.app.Activity;
-import android.app.Application;
+
+import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.fishpond.smartapp.utils.CommonUtils;
@@ -10,7 +13,6 @@ import com.gatz.netty.global.ConnectResultEvent;
 import com.gatz.netty.observer.HandlerObserver;
 import com.gatz.netty.observer.RequestSubscriber;
 import com.gatz.netty.observer.SuberInfo;
-import com.george.iot.fish.server.entity.json.app.AppInMarketResponse;
 import com.george.iot.fish.server.entity.json.control.GetStatusResponse;
 import com.george.iot.fish.server.entity.json.control.SwitchControlResponse;
 import com.george.iot.fish.server.entity.json.enums.FromType;
@@ -22,7 +24,7 @@ import java.util.List;
 /**
  * Created by zhouh on 2018/12/1.
  */
-public class MyApplication extends Application{
+public class MyApplication extends MultiDexApplication {
     private static final String TAG = "MyApplication-";
     private List<Activity> mList = new LinkedList<>();
     private static MyApplication instance = null;
@@ -31,6 +33,7 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         Log.e(TAG, "master");
+
         setHandlerCallBack();
         RxBus.get().register(this);
     }
@@ -73,6 +76,12 @@ public class MyApplication extends Application{
 
     public static MyApplication getInstance() {
         return instance;
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     // add Activity

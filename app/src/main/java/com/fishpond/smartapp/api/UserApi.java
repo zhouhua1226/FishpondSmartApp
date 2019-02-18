@@ -135,7 +135,7 @@ public class UserApi{
 
         @GET(UrlUtils.GET_AIRLEVEL_INFO)
         Observable<AirLevelBean> getAirLevel(@Query("location") String city
-                ,@Query("key") String key);
+                , @Query("key") String key);
     }
 
 }
