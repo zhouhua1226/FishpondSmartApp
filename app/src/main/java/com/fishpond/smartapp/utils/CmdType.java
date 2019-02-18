@@ -17,7 +17,7 @@ public enum CmdType {
         return value;
     }
 
-    public static String getSceneName(int value) {
+    public static String getSceneName(int value, String number) {
         CmdType[] types = CmdType.values();
         for(int i = 0; i < types.length; i++) {
             if (types[i].value == value) {

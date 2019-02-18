@@ -2,6 +2,7 @@ package com.fishpond.smartapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 
 import butterknife.ButterKnife;
 
@@ -13,6 +14,7 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("yt", getLocalClassName() + "onCreate");
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         afterCreate(savedInstanceState);
@@ -22,6 +24,12 @@ public abstract class BaseActivity extends Activity {
     protected void onRestart() {
         super.onRestart();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("yt", getLocalClassName() + "onDestroy");
     }
 
     protected abstract int getLayoutId();
